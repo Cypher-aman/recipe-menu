@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import RecipeCard from '../components/RecipeCard';
 import { getItems } from '../utils/localStorageHelper';
 import { IoMdHome } from 'react-icons/io';
@@ -8,12 +9,12 @@ const Favorites = () => {
 
   return (
     <div className="container px-2 py-4 md:py-10 mx-auto max-w-[800px]">
-      <a
-        href="/"
+      <Link
+        to="/"
         className="w-fit flex items-center gap-1 font-mono  rounded p-2 border"
       >
         <IoMdHome className="" /> Home
-      </a>
+      </Link>
       <h1 className="text-3xl font-mono text-center font-semibold">
         Favorites
       </h1>

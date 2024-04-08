@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import RecipeCard from '../components/RecipeCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import CommonError from '../components/Error/CommonError';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [data, setData] = useState<any[] | null>(null);
@@ -77,12 +78,12 @@ const Home = () => {
   return (
     <main className="">
       <div className="h-[300px] px-2 bg-slate-900 relative flex justify-center items-center flex-col">
-        <a
-          href="/favorites"
+        <Link
+          to="/favorites"
           className="text-white absolute font-mono top-5 right-5"
         >
           My Favorites
-        </a>
+        </Link>
         <div className="flex gap-4 w-full justify-center sm:flex-row flex-col items-center">
           <input
             onChange={handleSearchChange}
