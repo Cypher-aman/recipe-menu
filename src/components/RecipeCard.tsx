@@ -1,5 +1,4 @@
 // import { parseInstructions } from '../utils/parseApiResponse';
-import { Link } from 'react-router-dom';
 
 const RecipeCard = ({ recipe }: { recipe: any }) => {
   return (
@@ -36,11 +35,11 @@ const RecipeCard = ({ recipe }: { recipe: any }) => {
             <p className="text-gray-500">Health Score</p>
           </div>
         </div>
-        <Link className="mt-8 w-fit" to={`/recipe/${recipe.id}`}>
+        <a className="mt-8 w-fit" href={`/recipe/${recipe.id}`}>
           <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
             View recipe
           </button>
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useApiCall } from '../hooks/useApiCall';
 import { getRecipeById } from '../api/spoonacularApi';
 import CommonError from '../components/Error/CommonError';
@@ -59,11 +59,11 @@ const Recipe = () => {
       {!error && !isLoading && data && (
         <div className="w-full max-w-[700px] container px-2 py-6  ">
           <div className="text-gray-600 mb-10">
-            <Link to={lastVisited === 'favorites' ? '/favorites' : '/'}>
+            <a href={lastVisited === 'favorites' ? '/favorites' : '/'}>
               <span className="font-bold">
                 {lastVisited === 'favorites' ? 'Favorites' : 'Home'}
               </span>
-            </Link>{' '}
+            </a>{' '}
             &gt; <span>{data.title}</span>
           </div>
           <div className="w-full h-fit ">
