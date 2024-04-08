@@ -19,7 +19,8 @@ const Favorites = () => {
         Favorites
       </h1>
       <div className="py-10 flex flex-col gap-4 items-center">
-        {!items && <p>No items in favorites</p>}
+        {items === null && <p>No items in favorites</p>}
+        {items?.length === 0 && <p>No items in favorites</p>}
         {items?.map((item: any) => (
           <RecipeCard key={item.id} recipe={item} />
         ))}
